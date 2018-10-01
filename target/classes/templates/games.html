@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>NetEnt Games</title>
+    <link href="css/stylesheet.css" rel="stylesheet" />
+
+</head>
+<div>
+    NetEnt Games - Welcome!
+</div>
+
+<div>Choose below in which game you would like to play!</div>
+
+<div xmlns:th="http://www.w3.org/1999/xhtml">
+
+    <ul class="games-list" th:each="game : ${games}">
+        <li>
+            <div th:text="${game.type}">...</div>
+            <div th:text="${game.name}">...</div>
+            <div class="game-buttons-group">
+
+                <a th:href="@{|/game/${game.name}|}">
+                    <button>Choose</button></a>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+</html>
