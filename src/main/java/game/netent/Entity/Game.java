@@ -4,9 +4,7 @@ public abstract class Game {
 
     public String name;
 
-    public abstract void start();
-
-    public abstract void result();
+    public abstract String result(Round round);
 
     public String getName() {
         return name;

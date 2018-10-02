@@ -1,9 +1,7 @@
 package game.netent.Entity.Games.NetJackEnt.Rounds;
 
-import game.netent.Entity.Player;
 import game.netent.Entity.Round;
 
-import java.util.Random;
 
 public class Normal extends Round {
 
@@ -11,24 +9,17 @@ public class Normal extends Round {
 
     private int cost = 10;
 
-    public void process(Player player) {
+    @Override
+    public String result() {
 
-        Random random = new Random();
-
-        int chance = random.nextInt(101);
-
-        //win!
-        if(chance >= 30){
-            player.win(20);
+        String message;
+        if (this.lost) {
+            message = "Sorry, you lost round!";
+        } else {
+            message = "You won " + this.win + " coins! Congratulations!";
         }
-        //get free round
-        else if(chance >= 10) {
-            Round freeRound = new Free();
-       }
 
-       return
-
+        return message;
 
     }
-
 }

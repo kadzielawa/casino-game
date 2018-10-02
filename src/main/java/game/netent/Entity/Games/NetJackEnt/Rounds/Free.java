@@ -8,5 +8,8 @@ public class Free extends Round{
 
     private int cost = 0;
 
-
+    @Override
+    public String result() {
+        return this.type;
+    }
 }
