@@ -2,16 +2,34 @@ package game.netent.Entity;
 
 public class Player {
 
-    static int winGames;
+    private int winGames;
 
     private int balance;
 
-    static int lostGames;
-
+    private int lostGames;
 
     public void win(int coins){
-        winGames++;
+        this.winGames++;
         this.balance += coins;
     }
 
+    public void lost(){
+        this.lostGames++;
+    }
+
+    public int getBalance(){
+        return this.balance;
+    }
+
+    public int getLostGames() {
+        return this.lostGames;
+    }
+
+    public int getWinGames() {
+        return this.winGames;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
 }

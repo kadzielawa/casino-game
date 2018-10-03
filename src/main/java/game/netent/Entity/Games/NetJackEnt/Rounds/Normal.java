@@ -1,25 +1,38 @@
 package game.netent.Entity.Games.NetJackEnt.Rounds;
 
+import game.netent.Entity.Player;
 import game.netent.Entity.Round;
-
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class Normal extends Round {
 
     private String type = "normal";
 
-    private int cost = 10;
+    public int cost = 10;
+
+    public Normal(Player player) {
+        super(player);
+        this.payForRound(cost);
+
+    }
 
     @Override
     public String result() {
 
-        String message;
-        if (this.lost) {
-            message = "Sorry, you lost round!";
-        } else {
-            message = "You won " + this.win + " coins! Congratulations!";
+        JSONObject jsonObject = new JSONObject();
+
+        try {
+            jsonObject.put("is_win",this.win);
+            jsonObject.put("round_type",this.type);
+            jsonObject.put("player_balance",player.getBalance());
+            jsonObject.put("win_games",player.getWinGames());
+            jsonObject.put("lost_games",player.getLostGames());
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
 
-        return message;
+        return jsonObject.toString();
 
     }
 }

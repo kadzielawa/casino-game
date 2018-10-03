@@ -3,7 +3,7 @@ package game.netent.Entity.Games.NetJackEnt;
 import game.netent.Entity.Game;
 import game.netent.Entity.Player;
 import game.netent.Entity.Round;
-import game.netent.Entity.Games.NetJackEnt.Rounds.Normal;
+import org.json.JSONException;
 
 public class NetJackEnt extends Game {
 
@@ -16,8 +16,7 @@ public class NetJackEnt extends Game {
 
     @Override
     public String result(Round round) {
-        Player player = new Player();
-        Round returnedRound = round.spin(player);
+        Round returnedRound = round.spin();
         return returnedRound.result();
     }
 

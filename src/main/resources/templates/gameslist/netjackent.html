@@ -1,1 +1,26 @@
-hello
+<html>
+<head>
+    <title>NetJackEnt Game - Play!</title>
+</head>
+<body>
+<span id="is_win"></span>
+<div id="free_round"></div>
+<div>
+    <h2>Results:</h2>
+    <ul>
+        <li>Account balance:<span id="account_balance"></span></li>
+        <li>Win games:<span id="win_games"></span></li>
+        <li>Lost games:<span id="lost_games"></span></li>
+    </ul>
+</div>
+
+
+<a th:href="@{|/game/${game.name}/start|}" xmlns:th="http://www.w3.org/1999/xhtml">
+    <button id="play_normal_round">Play!</button></a>
+</a>
+
+<script src="/js/post.js"></script>
+<script src="/js/events.js"></script>
+</body>
+</html>
+
