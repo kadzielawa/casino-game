@@ -17,3 +17,121 @@ width: 40%;
   margin: 0 auto;
 
   }
+
+
+    body {
+    background-color: #edf0ff;
+    }
+    .flags_wrapper{
+        height: 100px;
+        width: 100px;
+        flex-grow:1;
+
+        float:left;
+
+    }
+
+    #game_title{
+        margin: 1% 2%;
+    }
+
+    .information_block {
+
+    }
+    .results_list {
+        list-style-type: none;
+        margin: 0 auto;
+        width: 20%;
+    }
+
+    .header {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .flag_bg {
+        background-image: url('/../images/big_weather_sprite.png');
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+
+        background-position-y: -0px;
+        background-position-x: -0px;
+    }
+
+    .netent_slot_machine {
+        display: flex;
+        margin: 0 auto;
+        height: 40%;
+        align-items: center;
+        justify-content: center;
+        max-width: 50%;
+
+    }
+
+    .button_group{
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+
+    .results_list {
+        border: 1px solid transparent;
+        padding: 1%;
+
+        -webkit-transition: border 0.1s linear, box-shadow 0.1s linear;
+        -moz-transition: border 0.1s linear, box-shadow 0.1s linear;
+        transition: border 0.1s linear, box-shadow 0.1s linear;
+
+    }
+
+    .big-text {
+        display:none;
+        color: #fff;
+        position:fixed;
+        font-size: 12em;
+        font-weight: bold;
+        font-family: Helvetica;
+        text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+    }
+
+    .big-text {
+        text-align: center;
+    }
+
+
+    .results_list.lost {
+        border-color: red;
+        border: 3px solid transparent;
+
+        -webkit-box-shadow: 0 0 5px red;
+        -moz-box-shadow: 0 0 5px red;
+        box-shadow: 0 0 5px red;
+    }
+
+    .results_list.win {
+        border-color: greenyellow;
+        border: 3px solid transparent;
+
+        -webkit-box-shadow: 0 0 5px green;
+        -moz-box-shadow: 0 0 5px green;
+        box-shadow: 0 0 5px green;
+    }
+
+.button5{
+     display: inline-block;
+     padding: 0.46em 1.6em;
+     border: 0.1em solid #000000;
+     margin: 0 0.2em 0.2em 0;
+     border-radius: 0.12em;
+     box-sizing: border-box;
+     text-decoration: none;
+     font-family: 'Roboto',sans-serif;
+     font-weight: 300;
+     color: #000000;
+     text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+     background-color: #FFFFFF;
+     text-align: center;
+     transition: all 0.15s;
+ }
+

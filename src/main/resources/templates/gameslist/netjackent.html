@@ -1,25 +1,58 @@
 <html>
 <head>
     <title>NetJackEnt Game - Play!</title>
+    <link href="/css/stylesheet.css" rel="stylesheet" />
 </head>
 <body>
-<span id="is_win"></span>
-<div id="free_round"></div>
-<div>
-    <h2>Results:</h2>
-    <ul>
-        <li>Account balance:<span id="account_balance"></span></li>
-        <li>Win games:<span id="win_games"></span></li>
-        <li>Lost games:<span id="lost_games"></span></li>
-    </ul>
+
+<div class="big-text">FREE ROUND!!!!</div>
+
+<div class="container">
+    <div class="header">
+        <canvas id="game_title" width="180" height="100" style="border:1px solid #d3d3d3;"></canvas>
+
+        <div class="information_block">
+            <ul class="results_list win">
+                <li>Account balance:<span id="account_balance"></span></li>
+                <li>Win games:<span id="win_games"></span></li>
+                <li>Lost games:<span id="lost_games"></span></li>
+                <li>Free rounds:<span id="free_rounds"></span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="netent_slot_machine">
+        <div class="flags_wrapper">
+            <div class="flag_bg">
+
+            </div>
+        </div>
+
+        <div class="flags_wrapper">
+            <div class="flag_bg">
+
+            </div>
+        </div>
+
+        <div class="flags_wrapper">
+            <div class="flag_bg">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="button_group">
+        <a th:href="@{|/game/${game.name}/start|}" xmlns:th="http://www.w3.org/1999/xhtml">
+            <button class="button5" id="click">Spin!</button></a>
+        </a>
+    </div>
 </div>
 
 
-<a th:href="@{|/game/${game.name}/start|}" xmlns:th="http://www.w3.org/1999/xhtml">
-    <button id="play_normal_round">Play!</button></a>
-</a>
 
-<script src="/js/post.js"></script>
+
+<script src="/js/request.js"></script>
+<script src="/js/game.js"></script>
 <script src="/js/events.js"></script>
 </body>
 </html>

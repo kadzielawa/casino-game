@@ -4,9 +4,10 @@ public class Player {
 
     private int winGames;
 
-    private int balance;
+    private int balance = 10000;
 
     private int lostGames;
+    private int freeRounds;
 
     public void win(int coins){
         this.winGames++;
@@ -15,6 +16,9 @@ public class Player {
 
     public void lost(){
         this.lostGames++;
+    }
+    public void freeRound(){
+        this.freeRounds++;
     }
 
     public int getBalance(){
@@ -31,5 +35,14 @@ public class Player {
 
     public void setBalance(int balance) {
         this.balance = balance;
+    }
+
+    public int getFreeRounds() {
+        return freeRounds;
+    }
+
+    public void payForRound(int cost) {
+        int newBalance = balance - cost;
+        setBalance(newBalance);
     }
 }

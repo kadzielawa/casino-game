@@ -4,7 +4,7 @@ import game.netent.Entity.Games.NetJackEnt.NetJackEnt;
 import game.netent.Entity.Games.NetJackEnt.Rounds.Free;
 import game.netent.Entity.Games.NetJackEnt.Rounds.Normal;
 import game.netent.Entity.Player;
-import org.json.JSONException;
+import game.netent.Entity.Round;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,21 +23,9 @@ public class NetJackEntController {
 
     @GetMapping(value ="/start", produces = "application/json")
     public String start()  {
-        return game.result(new Normal(player));
+
+        return game.spin(player);
     }
 
-    @GetMapping(value = "/freestart",produces = "application/json")
-    public String freestart() {
-        return game.result(new Free(player));
-    }
-
-    @GetMapping(value = "/simulate",produces = "application/json")
-    public String simulate(){
-
-            for(int i = 0; i < 10000; i++) {
-        new Normal(player);
-    }
-        return game.result(new Normal(player));
-    }
 
 }
